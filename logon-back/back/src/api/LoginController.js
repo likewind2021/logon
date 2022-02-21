@@ -68,7 +68,6 @@ class LoginController {
       // mongoDB 查库
       if (checkUserPassword) {
         // 验证通过，返回 Token 数据
-        console.log('hello')
         // , exp: Math.floor(Date.now() / 1000) + 60 * 60 * 24
         const token = jsonwebtoken.sign({ _id: 'Jackson Yee' }, config.JWT_SECRET, { expiresIn: '1d' })
         ctx.body = {
